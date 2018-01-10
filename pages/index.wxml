@@ -1,0 +1,33 @@
+<view class='body'>
+	<navbar navs='{{ navs }}' bind:navChange='navChange'></navbar>
+	
+	<view class='container'>
+
+		<view class='content'>{{ content[nav] }}</view>
+
+		<button bindtap='showModal' size='mini' type='primary'>show modal</button>
+
+		<button bindtap='showPrompt' size='mini' type='primary'>show prompt</button>
+
+		<button bindtap='showToast' size='mini' type='primary'>show toast</button>		
+		
+		<view class='editor-container'>
+			<form bindsubmit='formSubmit'>
+				<editor id='editor'></editor>
+				<button form-type='submit'>提交</button>
+			</form>
+		</view>
+
+		<navigator url='./upload'>
+			<button type='warn' size='mini'>第二页</button>
+		</navigator>
+	</view>
+</view>
+
+<toast id='toast' class='{{ toastShow && "active" }}'></toast> 
+
+<prompt id='prompt' title='prompt title' placeholder='请输入...' class='{{ promptShow && "active" }}' bind:showPrompt='showPrompt'></prompt> 
+
+<modal id='modal' title='modal title' class='{{ modalShow && "active" }}' bind:showModal='showModal'>
+	<view>自定义区域</view>
+</modal> 		

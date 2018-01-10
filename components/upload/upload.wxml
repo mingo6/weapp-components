@@ -1,0 +1,8 @@
+<view class='image-upload'>
+   <view class='image-item' wx:for='{{ image.temp }}' wx:key='{{ index }}' hidden='{{ !image.temp[0] }}'>
+      <image mode='aspectFill' src='{{ item }}' data-src='{{ item }}' bindtap='imagePreview'></image>
+      <text wx:if='{{ !image.complete[index] }}'>{{ image.progress[index] }}%</text>
+      <image class='image-delete' src='/assets/images/delete.png' hidden='{{ !image.temp[0] && !image.complete[index] }}' data-index='{{ index }}' bindtap='imageDelete'></image>
+   </view>
+   <image src='/assets/images/select.png' hidden='{{ image.overflow }}' bindtap='imageSelect'></image>
+</view>

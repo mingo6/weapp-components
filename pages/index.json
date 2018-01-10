@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+		"navbar": "/components/navbar/navbar",
+		"modal": "/components/modal/modal",
+		"prompt": "/components/prompt/prompt",
+		"editor": "/components/editor/editor",
+		"toast": "/components/toast/toast"
+	}
+}

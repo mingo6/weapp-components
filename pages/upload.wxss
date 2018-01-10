@@ -1,0 +1,8 @@
+page {
+	padding: 100rpx 0;
+	box-sizing: border-box;
+}
+.title {
+	padding: 20rpx;
+	color: #888;
+}

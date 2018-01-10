@@ -1,0 +1,17 @@
+<view class='prompt'>
+	<view class='prompt-title {{ isEmpty && "c-primary" }}'>
+		{{ title }}
+	</view>
+	<view class='prompt-body'>
+		<block wx:if='{{ inputType === "textarea" }}'>
+			<textarea class='{{ textareaHide && "hide" }}' value='{{ value }}' bindinput='handleInput' show-confirm-bar='{{ false }}' focus='{{ focus }}' placeholder='{{ placeholder }}'></textarea>
+		</block>
+		<block wx:if='{{ inputType === "input" }}'>
+			<input value='{{ value }}' bindinput='handleInput' focus='{{ focus }}' placeholder='{{ placeholder }}'></input>
+		</block>
+	</view>
+	<view class='prompt-footer'>
+		<text data-confirm='false' bindtap='hidePrompt'>取消</text>
+		<text data-confirm='true' bindtap='hidePrompt' class='c-primary'>确定</text>
+	</view>
+</view>

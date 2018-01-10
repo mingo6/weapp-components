@@ -1,0 +1,21 @@
+:host {
+   position: fixed;
+   left: 50%;
+	top: 30%;
+   transform: translateX(-50%) translateZ(0) translateY(-100%);
+   background: rgba(0, 0, 0, 0.4);
+	min-width: 40%;
+   margin: 0 auto;
+   border-radius: 5rpx;
+   z-index: 100;
+	visibility: hidden;
+	opacity: 0;
+	transition: .2s;
+}
+.toast {
+   color: #fff;
+   line-height: 1.5em;
+   padding: 20rpx;
+   box-sizing: border-box;
+   text-align: center;
+}

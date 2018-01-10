@@ -1,0 +1,7 @@
+	<view class='navbar'>
+		<block wx:for='{{ navs }}' wx:key='nav_{{ index }}'>
+			<view class='navbar-item {{ index === nav && "active" }}' data-nav='{{ index }}' bindtap='handleNavChange'>
+				<text>{{ item.text }}</text>
+			</view>
+		</block>
+	</view>

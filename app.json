@@ -1,0 +1,12 @@
+{
+   "pages": [
+      "pages/index",
+      "pages/upload"
+   ],
+   "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#DD127B",
+      "navigationBarTitleText": "组件",
+      "navigationBarTextStyle": "white"
+   }
+}

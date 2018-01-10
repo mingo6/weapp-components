@@ -1,0 +1,4 @@
+.picker {
+	padding: 40rpx;
+	background-color: #fff;
+}

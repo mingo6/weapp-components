@@ -1,0 +1,10 @@
+<view class='modal'>
+	<view class='modal-title'> {{ title }} </view>
+	<view class='modal-body'>
+		<slot></slot>
+	</view>
+	<view class='modal-footer'>
+		<text data-confirm='false' bindtap='hideModal'>取消</text>
+		<text data-confirm='true' bindtap='hideModal' class='c-primary'>确定</text>
+	</view>
+</view>

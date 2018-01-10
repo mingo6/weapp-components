@@ -1,0 +1,13 @@
+
+<view class='title'>图片上传</view>
+
+<!--  multiple: 图片数量，默认 1  -->
+<image-upload id='image-upload' multiple='1'></image-upload>
+
+<button bindtap='getImageUrls'>打印图片链接</button>
+
+
+
+<view style='padding: 50rpx 0'>请打开/components/upload/oss/env.js配置oss上传</view>
+
+<city-picker></city-picker>
