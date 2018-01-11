@@ -81,10 +81,8 @@ Component({
 								//// areas
 								data.datas[2] = this.data.areas[i][0]
 								data.index[2] = 0
-								///// 当前city下的 areas
-								this.setData({
-									currentAreas: this.data.areas[i]
-								})
+								///// 存储当前city下的 areas
+								this.currentAreas = this.data.areas[i]
 							}
 							break;
 					}
@@ -95,7 +93,7 @@ Component({
 				for (let i = 0; i < data.datas[1].length; i++) {
 					switch (data.index[1]) {
 						case i:
-							data.datas[2] = this.data.currentAreas[i]
+							data.datas[2] = this.currentAreas[i]
 							data.index[2] = 0
 							break;
 					}
