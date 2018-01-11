@@ -18,7 +18,7 @@
 
 5. navbar 顶部导航
 
-6. markdown-ditor
+6. markdown-editor
 
 7. image-upload
 	> oss直传
