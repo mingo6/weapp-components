@@ -1,9 +1,9 @@
 ## 自用小程序组件
 
-1. prompt 对话框
+1. modal 自定义弹窗
 
-2. modal 自定义弹窗
-	> 支持input textaea(已优化textarea层级过高问题)
+2. prompt 对话框
+	> 支持input textarea (已优化textarea层级过高问题)
 
 3. toast
 
