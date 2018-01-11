@@ -3,7 +3,7 @@
 1. prompt 对话框
 
 2. modal 自定义弹窗
-> 支持input textaea(已优化textarea层级过高问题)
+	> 支持input textaea(已优化textarea层级过高问题)
 
 3. toast
 
