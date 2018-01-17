@@ -1,0 +1,20 @@
+.verify-btn {
+   font-size: 30rpx;
+   border: none;
+   background-color: #32b97f !important;
+   color: #fff !important;
+   border-radius: 8rpx;
+   display: inline-block;
+   padding: 20rpx 25rpx;
+   line-height: 1;
+}
+
+.verify-btn.disabled {
+   opacity: 0.6;
+	background-color: #32b97f;
+	color: rgba(255, 255, 255, .6)
+}
+
+.verify-btn::after, .verify-btn::before {
+   display: none;
+}

@@ -23,3 +23,4 @@
 7. image-upload
 	> oss直传
 
+8. verify-code 获取短信验证码
