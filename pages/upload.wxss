@@ -21,13 +21,17 @@ page {
 	align-items: center;
 	flex-wrap: wrap;
 }
+.form-item:last-child {
+	border: none;
+}
 
 .form-item text {
 	flex: 1;
 	line-height: 1.4rem;
 	color: #888;
 }
-.form-item input {
+.form-item input,
+.form-item city-picker {
 	flex: 3;
 	line-height: 1.4rem;
 	color: #666;

@@ -11,7 +11,12 @@
 <view style='padding: 50rpx 0'>请打开/components/upload/oss/env.js配置oss上传</view>
 
 <view class='title'>城市三级联动</view>
-<city-picker id='city-picker'></city-picker>
+<form class="form">
+	<view class='form-item'>
+		<text>所在地区</text>
+		<city-picker id='city-picker'></city-picker>
+	</view>
+</form>
 
 <view class='title'>获取验证码</view>
 <form class="form">
