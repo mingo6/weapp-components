@@ -6,7 +6,7 @@ Component({
 		level: {
 			type: Number,
 			value: 3
-		}
+		},
 	},
 
 	//// 默认3级
@@ -33,6 +33,10 @@ Component({
 				datas: datas.provinces,
 				index: 0
 			})
+		} else if (this.properties.level === 3) {
+			this.currentAreas = this.data.areas[this.data.index[0]]
+		} else {
+			throw 'level invalid'
 		}
 	},
 
