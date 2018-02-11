@@ -20,6 +20,9 @@ Component({
 	},
 
 	attached() {
+		console.log(datas.provinces)
+		console.log(datas.cities())
+		console.log(datas.areas())
 		if (this.properties.level === 2) {
 			this.setData({
 				datas: [

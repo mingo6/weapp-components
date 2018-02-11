@@ -30,3 +30,13 @@
 		<verify-code bindtap='getVerifyCode' id='verify-code'></verify-code>
 	</view>
 </form>
+
+<button bindtap='showModal' size='mini' type='primary'>show modal</button>
+<!-- 
+<modal id='modal' title='选择机型' class='{{ modalShow && "active" }}' bind:showModal='showModal'>
+	<picker-view-demo id='picker-view-demo'></picker-view-demo>
+</modal> 	 -->
+
+<modal id='modal' class='{{ modalShow && "active" }}' bind:showModal='showModal'>
+	<time-picker id='time-picker'></time-picker>
+</modal> 	

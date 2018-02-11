@@ -1,0 +1,8 @@
+<picker-view bindchange='handleChange' value='{{ [__date, __time] }}' class='picker-view' indicator-class='picker-indicator'>
+   <picker-view-column>
+      <view wx:for='{{ __dates }}' class='picker-view__item' style='line-height:45px'>{{ item }}</view>
+   </picker-view-column>
+   <picker-view-column>
+      <view wx:for='{{ __times }}' class='picker-view__item' style='line-height:45px'>{{ item }}</view>
+   </picker-view-column>
+</picker-view>

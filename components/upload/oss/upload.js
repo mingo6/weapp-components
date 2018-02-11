@@ -33,7 +33,7 @@ const uploadFile = function (params) {
 
 	const aliyunServerURL = env.uploadImageUrl;
 	const accessid = env.OSSAccessKeyId;
-	const policyBase64 = getPolicyBase64();
+	const policyBase64 = getPolicyBase64(params.size);
 	const signature = getSignature(policyBase64);
 
 	wx.uploadFile({
@@ -69,14 +69,15 @@ const uploadFile = function (params) {
 	})
 }
 
-const getPolicyBase64 = function () {
+const getPolicyBase64 = function (size) {
+	size = typeof size === 'number' ? size : 5
 	let date = new Date();
 	date.setHours(date.getHours() + env.timeout);
 	let srcT = date.toISOString();
 	const policyText = {
 		"expiration": srcT, //设置该Policy的失效时间
 		"conditions": [
-			["content-length-range", 0, 5 * 1024 * 1024] // 设置上传文件的大小限制,5mb
+			["content-length-range", 0, size * 1024 * 1024] // 设置上传文件的大小限制,5mb
 		]
 	};
 

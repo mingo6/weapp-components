@@ -1,0 +1,13 @@
+.picker-indicator {
+	height: 45px;
+}
+.picker-view {
+	height: 400rpx;
+	width: 100%;
+}
+.picker-view__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32rpx;
+}

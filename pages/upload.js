@@ -35,5 +35,18 @@ Page({
 				})
 			})
 		})
-	}
+	},
+
+
+	showModal(e) {
+		this.selectComponent('#modal').showModal(this)
+		if (e.detail.hasOwnProperty('confirm')) {
+			if (e.detail.confirm) {
+				// let selected = this.selectComponent('#picker-view-demo').selected
+				let selected = this.selectComponent('#time-picker').data.dateTime
+
+				console.log(selected)
+			}
+		}
+	},
 })

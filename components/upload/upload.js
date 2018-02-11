@@ -52,8 +52,8 @@ Component({
 				if (!complete[i] && progress[i] === 0) {
 					upload({
 						/***
-							dir: 指定oss bucket 目录, 默认根目录;
-							dir: 'image/'
+							dir: 'image/' // 指定oss bucket 目录, 默认根目录;
+							size: 10, // 上传图片最大限制(MB) 默认 5MB
 						*/
 						filePath: value, // 临时文件路径
 						uploading: res => {
@@ -74,6 +74,12 @@ Component({
 						},
 						fail: err => {
 							console.log(err)
+							wx.showToast({
+								title: '上传失败',
+							})
+							setTimeout(_ => {
+								this.imageDelete(i, false)
+							}, 1000)
 						}
 					})
 				}
@@ -88,11 +94,11 @@ Component({
 			})
 		},
 
-		imageDelete(e) {
+		imageDelete(e, state) {
 			let temp = this.data.image.temp
 			let urls = this.data.image.urls
 
-			let i = parseInt(e.currentTarget.dataset.index)
+			let i = typeof e === 'object' ? parseInt(e.currentTarget.dataset.index) : e
 			if (temp.length > 0 && urls.length > 0) {
 				let progress = this.data.image.progress
 				let complete = this.data.image.complete
@@ -108,8 +114,17 @@ Component({
 					'image.complete': complete,
 					'image.overflow': temp.length >= this.properties.multiple
 				})
+			} else if (temp.length > 0 && !state) {
+				let progress = this.data.image.progress
+				temp.splice(i, 1)
+				progress[i] = 0
+				this.setData({
+					'image.temp': temp,
+					'image.progress': progress,
+					'image.overflow': false
+				})
 			}
-		},
+ 		},
 
 	}
 })

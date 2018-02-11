@@ -1,0 +1,14 @@
+<view>
+   <picker-view class='picker-view' indicator-style="height:100rpx" value="{{ [brand, model] }}" bindchange="bindChange">
+      <picker-view-column>
+         <view class='picker-view__item' wx:for="{{ brands }}" wx:key='brand_{{ idnex }}'>
+            {{ item.name }}
+         </view>
+      </picker-view-column>
+      <picker-view-column>
+         <view class='picker-view__item' wx:for="{{ models }}" wx:key='model_{{ index }}'>
+            {{ item.model }}
+         </view>
+      </picker-view-column>
+   </picker-view>
+</view>
