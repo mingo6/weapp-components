@@ -1,0 +1,70 @@
+.form {
+	display: flex;
+	flex-direction: column;
+}
+.form-title {
+	padding: 20rpx;
+	color: #888;
+	height: 1.4rem;
+	line-height: 1.4rem;
+}
+.form-item {
+	padding: 20rpx;
+	border-bottom: 1rpx solid #f5f5f5;
+	display: flex;
+	align-items: center;
+	flex-wrap: no-wrap;
+}
+.form-item:last-child {
+	border: none;
+}
+.form-label {
+	height: 1.4rem;
+	color: #888;
+	text-align: justify;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	line-height: 1.4rem;
+	padding-right: 1em;
+	box-sizing: border-box;
+	min-width: 5em;
+	max-width: 5em;
+}
+.form-label::after {
+	display: inline-block;  
+   content: '';  
+   overflow: hidden;  
+   width: 100%;  
+   height:0 !important;
+   line-height: 0 !important;
+}
+
+.form-item input,
+.form-item picker,
+.form-item city-picker,
+.form-item radio-group,
+.form-item checkbox-group {
+	line-height: 1.4rem;
+	flex: 1;
+	height: 1.4rem;
+	color: #666;
+}
+.form-item .form-tip {
+	display: block;
+	min-width: 100%;
+	font-size: 30rpx;
+	color: #999;
+	text-align: center;
+	line-height: 1.5;
+}
+.form-item button[form-type="submit"] {
+	margin: 20rpx auto;
+	width: 80%;
+	color: #fff;
+	font-size: 32rpx;
+	border: none;
+}
+.form-item button[form-type="submit"]::after,
+.form-item button[form-type="submit"]::before {
+	display: none;
+}

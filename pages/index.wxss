@@ -19,16 +19,3 @@
 .editor-container {
 	margin-top: 20rpx;
 }
-
-modal.active {
-	visibility: visible;
-	opacity: 1;
-}
-prompt.active {
-	visibility: visible;
-	opacity: 1;
-}
-toast.active {
-	visibility: visible;
-	opacity: 1;
-}

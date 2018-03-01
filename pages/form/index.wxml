@@ -1,0 +1,31 @@
+<view class='container'>
+	<form class="form">
+		<view class='form-title'>城市选择器</view>
+		<view class='form-item'>
+			<text class='form-label'>省</text>
+			<city-picker level='1' id='city-picker-1'></city-picker>
+		</view>
+
+		<view class='form-item'>
+			<text class='form-label'>省市</text>
+			<city-picker level='2' id='city-picker-2'></city-picker>
+		</view>
+		
+		<view class='form-item'>
+			<text class='form-label'>省市区</text>
+			<city-picker id='city-picker-3'></city-picker>
+		</view>
+		
+		<view class='form-title'>获取验证码</view>
+		<view class='form-item'>
+			<text class='form-label'>联系电话</text>
+			<input type='number' bindinput='getMobile' placeholder='请输入联系电话'></input>
+		</view>
+		<view class='form-item'>
+			<text class='form-label'>验证码</text>
+			<input placeholder='请输入验证码' type='number' name='verifyCode'></input>
+			<verify-code bindtap='getVerifyCode' id='verify-code'></verify-code>
+		</view>
+
+	</form>
+</view>

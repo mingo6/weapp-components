@@ -100,14 +100,22 @@ Component({
 		},
 
 		getNowTimeIndex(date) {
-			const { __times } = this.data
+			const { __times, time } = this.data
 			date = date || new Date()
 			const currentHour = date.getHours()
 			const currentMinute = date.getMinutes()
 
 			for (let i = 0; i < __times.length; i ++) {
 				let [hour, minute] = __times[i].split(':')
-				let lastMinute = __times[i + 1] ? __times[i + 1].split(':')[1] : '00'
+
+				let slotStart = Number(hour) * 60 + Number(minute)
+				let current = currentHour * 60 + currentMinute
+
+				let lastHour = __times[i + 1] ? __times[i + 1].split(':')[0] : time.start
+				let lastMinute = __times[i + 1] ? __times[i + 1].split(':')[1] : 0
+				let slotEnd = Number(lastHour) * 60 + Number(lastMinute)
+				
+
 				if (Number(hour) === currentHour && currentMinute >= Number(minute) && currentMinute < Number(lastMinute)) {
 					return i
 					break;

@@ -1,0 +1,16 @@
+page {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	flex-direction: column;
+}
+.container {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+.container text {
+	font-size: 100px;
+	color: #888;
+}

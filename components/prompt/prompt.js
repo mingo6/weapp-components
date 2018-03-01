@@ -25,24 +25,36 @@ Component({
 
 	data: {
 		isEmpty: false,
-		textareaHide: true
+		textareaHide: true,
+		promptShow: false,
+		hide: true
 	},
 
 	methods: {
 		showPrompt(_this) {
-			_this.setData({ promptShow: !_this.data.promptShow })
-			this.textareaHidden(_this.data.promptShow)
+			// _this.setData({ promptShow: !_this.data.promptShow })
+			// this.textareaHidden(_this.data.promptShow)
+			this.setData({
+				promptShow: true,
+				hide: false
+			})
 		},
 		hidePrompt(e) {
 			let confirm = JSON.parse(e.currentTarget.dataset.confirm)
 			if (confirm) {
-				if (this.data.value.trim() !== '') {
+				if (this.data.value.trim()) {
 					this.triggerEvent('showPrompt', {
 						confirm: true,
 						value: this.data.value
 					})
-					this.delay(0).then(_ => {
-						this.setData({ value: '' })
+					this.setData({ 
+						promptShow: false
+					})
+					this.delay(301).then(_ => {
+						this.setData({
+							hide: true,
+							value: '',
+						})
 					})
 				} else {
 					this.setData({ isEmpty: true })
@@ -54,7 +66,14 @@ Component({
 				this.triggerEvent('showPrompt', {
 					confirm: false,
 				})
-
+				this.setData({
+					promptShow: false,
+				})
+				this.delay(301).then(_ => {
+					this.setData({
+						hide: true
+					})
+				})
 			}
 		},
 		handleInput(e) {
@@ -69,14 +88,14 @@ Component({
 				}, time)
 			})
 		},
-		textareaHidden(promptShow) {
-			if (promptShow) {
-				this.setData({ textareaHide: false })
-			} else {
-				this.delay(300).then(_ => {
-					this.setData({ textareaHide: true })
-				})
-			}
-		}
+		// textareaHidden(promptShow) {
+		// 	if (promptShow) {
+		// 		this.setData({ textareaHide: false })
+		// 	} else {
+		// 		this.delay(300).then(_ => {
+		// 			this.setData({ textareaHide: true })
+		// 		})
+		// 	}
+		// }
 	}
 })

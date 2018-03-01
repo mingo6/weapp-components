@@ -1,7 +1,11 @@
 {
    "pages": [
       "pages/index",
-      "pages/upload"
+		"pages/navbar/index",
+		"pages/modal/index",
+		"pages/editor/index",
+		"pages/upload/index",
+		"pages/form/index"
    ],
    "window": {
       "backgroundTextStyle": "light",

@@ -4,29 +4,41 @@ Component({
 		duration: {
 			type: Number,
 			value: 3000
-		}
+		},
 	},
 
 	data: {
-		text: 'i am a toast'
+		text: 'i am a toast',
+		hide: true,
+		toastShow: false
 	},
 
 	methods: {
-		showToast(_this, text) {
-			text && this.setData({ text })
+		showToast(text) {
+			text && this.setData({ 
+				text, 
+				hide: false,
+				toastShow: true
+			})
 
-			_this.setData({ toastShow: true })
-
-			this.clearToast(_this)
+			this.clearToast()
 		},
-		clearToast(_this) {
+		clearToast() {
+			clearTimeout(this.timer || null)
 			this.delay(this.properties.duration).then(_ => {
-				_this.setData({ toastShow: false })
+				this.setData({
+					toastShow: false
+				})
+				this.delay(201).then(_ => {
+					this.setData({
+						hide: true,
+					})
+				})
 			})
 		},
 		delay(time) {
 			return new Promise(resolve => {
-				setTimeout(_ => {
+				this.timer = setTimeout(_ => {
 					resolve()
 				}, time)
 			})

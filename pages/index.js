@@ -40,8 +40,4 @@ Page({
 		this.selectComponent('#toast').showToast(this, 'a toast')
 	},
 
-	formSubmit() {
-		let content = this.selectComponent('#editor').data.content
-		console.log(content)
-	}
 })

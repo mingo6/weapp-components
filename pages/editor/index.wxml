@@ -1,0 +1,9 @@
+<view class='editor-container'>
+	<form bindsubmit='formSubmit'>
+		<editor id='editor' content='{{ content }}'></editor>
+
+		<view class='form-item'>
+			<button class='btn btn__primary' form-type='submit'>提交</button>
+		</view>
+	</form>
+</view>

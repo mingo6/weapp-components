@@ -1,17 +1,13 @@
 <block wx:if='{{ level === 1 }}'>
 	<picker class='picker' mode='selector' bindchange='handlePickerChange' value="{{ index }}" range="{{ datas }}" range-key='name'>
-		<view>
-			{{ datas[index].name }}
-		</view>
+		{{ datas[index].name }}
 	</picker>
 </block>
 
 <block wx:else>
 	<picker class='picker' mode="multiSelector" bindchange="handlePickerChange" bindcolumnchange="handlePickerColumnChange" value="{{ index }}" range="{{ datas }}" range-key='name'>
-		<view>
-			{{ datas[0][index[0]].name }}
-			{{ datas[1][index[1]].name }}
-			{{ datas[2][index[2]].name }}
-		</view>
+		{{ datas[0][index[0]].name }}
+		{{ datas[1][index[1]].name }}
+		{{ datas[2][index[2]].name }}
 	</picker>
 </block>

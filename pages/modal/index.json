@@ -2,7 +2,7 @@
 	"usingComponents": {
 		"modal": "/components/modal/modal",
 		"prompt": "/components/prompt/prompt",
-		"editor": "/components/editor/editor",
-		"toast": "/components/toast/toast"
+		"toast": "/components/toast/toast",
+		"time-picker": "/components/time-picker/time-picker"
 	}
 }

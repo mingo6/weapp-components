@@ -1,0 +1,6 @@
+
+<navbar navs='{{ navs }}' bind:navChange='navChange'></navbar>
+	
+<view class='container'>
+	<text>{{ content[nav] }}</text>
+</view>

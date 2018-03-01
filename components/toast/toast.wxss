@@ -1,21 +1,55 @@
 :host {
+	width: 0;
+	height: 0;
+}
+
+.toast-container {
    position: fixed;
    left: 50%;
 	top: 30%;
    transform: translateX(-50%) translateZ(0) translateY(-100%);
-   background: rgba(0, 0, 0, 0.4);
+   background: rgba(0, 0, 0, 0.5);
 	min-width: 40%;
    margin: 0 auto;
    border-radius: 5rpx;
    z-index: 100;
-	visibility: hidden;
-	opacity: 0;
 	transition: .2s;
+	animation: fadeOut .2s; 
 }
+
+.toast-container.active {
+	animation: fadeIn .2s;
+}
+
 .toast {
    color: #fff;
    line-height: 1.5em;
    padding: 20rpx;
    box-sizing: border-box;
    text-align: center;
+}
+.toast.hide {
+	display: none;
+}
+
+@keyframes fadeIn {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	100% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
 }

@@ -1,0 +1,13 @@
+
+modal.active {
+	visibility: visible;
+	opacity: 1;
+}
+prompt.active {
+	visibility: visible;
+	opacity: 1;
+}
+/* toast.active {
+	visibility: visible;
+	opacity: 1;
+} */

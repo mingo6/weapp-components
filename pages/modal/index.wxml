@@ -1,0 +1,26 @@
+
+<view class='card'>
+	<view bindtap='showModal' class='card-content-inner'>时间选择</view>
+</view>
+
+<view class='card'>
+	<view bindtap='showPrompt' class='card-content-inner'>prompt 对话框</view>
+</view>
+
+<view class='card'>
+	<view bindtap='showToast' class='card-content-inner'>toast 提示</view>
+</view>
+
+<view class='card'>
+	<view bindtap='eventMethods.handleTap' class='card-content-inner'>test </view>
+</view>
+
+
+
+<toast id='toast'></toast>
+
+<prompt id='prompt' title='prompt title' placeholder='请输入...' class='{{ promptShow && "active" }}' bind:showPrompt='showPrompt'></prompt> 
+
+<modal id='modal' class='{{ modalShow && "active" }}' bind:showModal='showModal'>
+	<time-picker id='time-picker'></time-picker>
+</modal>

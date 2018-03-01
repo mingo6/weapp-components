@@ -1,3 +1,8 @@
+@import '/assets/wxss/btn.wxss';
+@import '/assets/wxss/card.wxss';
+@import '/assets/wxss/form.wxss';
+@import '/assets/wxss/cell.wxss';
+
 page {
 	width: 100%;
 	height: 100%;
